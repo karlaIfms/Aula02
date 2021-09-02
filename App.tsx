@@ -17,31 +17,31 @@ const styleOneLinkHeader = StyleSheet.create({
 const LinksHeader = ()=>{
     return(// Aqui dentro eu coloco meu JSX
         <View style={styleLinksHeader.container}>
-            <Text style={{color:"#4A4A4C"}}>Home</Text>
+            {/* <Text style={{color:"#4A4A4C"}}>Home</Text>
             <Text style={styleLinksHeader.link}>Post</Text>
             <Text>Videos</Text>
             <Text>Photos</Text>
-            <Text>Community</Text>
-            <OneLinkHeader nome="home"/>
+            <Text>Community</Text> */}
+            <OneLinkHeader nome="Home"/>
             <OneLinkHeader nome="Post"/>
             <OneLinkHeader nome="Videos"/>
             <OneLinkHeader nome="Photos"/>
-            <OneLinkHeader nome="community"/>
-            <OneLinkHeader/>
-            <OneLinkHeader/>
-            <OneLinkHeader/>
+            <OneLinkHeader nome="Community"/>
         </View>
     );
 };
 
 const styleLinksHeader = StyleSheet.create({
     container:{
-        backgroundColor:"lightblue",
+        //backgroundColor:"lightblue",
         color:"white",
+        flexDirection:"row",
+        justifyContent:"space-between",
+        paddingHorizontal:35,
+        paddingVertical:10,
+        borderBottomColor:"#F0F0F0",
+        borderBottomWidth:0.5,
     },
-    link:{
-        color:"#4A4A4C",
-    }
 });
 
 
