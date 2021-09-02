@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 10,
         height:40,
         alignItems:"center",
-        flexDirection:"row",
+        flexDirection:"row", 
     },
     textInput:{
         flex:1,
