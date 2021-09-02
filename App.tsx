@@ -5,7 +5,7 @@ const OneLinkHeader = (props:any)=>{
     return(
         <View>
             <Text style={styleOneLinkHeader.link}>{props.nome}</Text>
-        </View>
+        </View>    
     );
 };
 const styleOneLinkHeader = StyleSheet.create({
