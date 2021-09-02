@@ -1,6 +1,51 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
+const OneLinkHeader = (props:any)=>{
+    return(
+        <View>
+            <Text style={styleOneLinkHeader.link}>{props.nome}</Text>
+        </View>
+    );
+};
+const styleOneLinkHeader = StyleSheet.create({
+    link:{
+        color:"#4A4A4C",
+    }
+});
+
+const LinksHeader = ()=>{
+    return(// Aqui dentro eu coloco meu JSX
+        <View style={styleLinksHeader.container}>
+            <Text style={{color:"#4A4A4C"}}>Home</Text>
+            <Text style={styleLinksHeader.link}>Post</Text>
+            <Text>Videos</Text>
+            <Text>Photos</Text>
+            <Text>Community</Text>
+            <OneLinkHeader nome="home"/>
+            <OneLinkHeader nome="Post"/>
+            <OneLinkHeader nome="Videos"/>
+            <OneLinkHeader nome="Photos"/>
+            <OneLinkHeader nome="community"/>
+            <OneLinkHeader/>
+            <OneLinkHeader/>
+            <OneLinkHeader/>
+        </View>
+    );
+};
+
+const styleLinksHeader = StyleSheet.create({
+    container:{
+        backgroundColor:"lightblue",
+        color:"white",
+    },
+    link:{
+        color:"#4A4A4C",
+    }
+});
+
+
+
 
 export default function App() {
   return (
@@ -11,15 +56,28 @@ export default function App() {
                 require("./src/assets/arrow-left.png")
                 }>
             </Image>
-            <Image source={
-                require("./src/assets/ei_search.png")
-                }>
-            </Image>
+            <View style={styles.inputTextView}>
+                <Image source={
+                    require("./src/assets/ei_search.png")
+                    }>
+                </Image>
+                <TextInput
+                    style={styles.textInput}
+                    placeholder="Search"
+                    placeholderTextColor="#F5FFFF"
+                    >
+                    
+
+                </TextInput>
+            </View>
             <Image source={
                 require("./src/assets/share.png")
                 }>
             </Image>
         </View>
+        <LinksHeader></LinksHeader>
+
+
     </View>
   );
 }
@@ -37,5 +95,20 @@ const styles = StyleSheet.create({
         justifyContent:"space-between",
         alignItems:"center",
         paddingHorizontal:30,
+        paddingTop:50,
+    },
+    inputTextView:{
+        flex:1,
+        borderRadius:28,
+        backgroundColor:"#2C4877",
+        marginHorizontal: 10,
+        height:40,
+        alignItems:"center",
+        flexDirection:"row",
+    },
+    textInput:{
+        flex:1,
+        paddingRight:10,
+        color:"#F5FFFF",
     },
 });
