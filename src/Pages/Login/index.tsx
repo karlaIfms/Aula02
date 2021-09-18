@@ -18,7 +18,7 @@ const Login = () => {
         <View style={styles.container}>
             <View style={styles.viewLogo}>
                 <Image source={require("../../assets/logo-face3.png")}/>
-                <Text style={styles.title}>Facebook</Text>
+                <Text style={styles.title}>Facebook</Text>   
             </View>
 
             <View>
