@@ -1,11 +1,11 @@
 import React from 'react';
 import { Text, View, TextInput, Image, TouchableOpacity,  Linking } from 'react-native';
-import { styles } from './style';
+import { styles } from './styles';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { StackNavigationParamList } from './types';
+import { StackNavigatorParamList } from './types';
 
-type LoginPros = NativeStackNavigationProp<StackNavigationParamList, 'Login'>;
+type LoginPros = NativeStackNavigationProp<StackNavigatorParamList, 'Login'>;
 
 const Login = () => {
     const navigation = useNavigation<LoginPros>();

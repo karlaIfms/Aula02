@@ -1,4 +1,4 @@
-export type StackNavigationParamList = {
+export type StackNavigatorParamList = {
     Home: undefined,
-    Login:undefined,    
+    Login: undefined,
 }
